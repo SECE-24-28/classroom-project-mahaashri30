@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Aura - Premium Gadget Store</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="navbar-styles.css">
+</head>
+<body>
+    <!-- Fixed Navbar -->
+    <header class="site-header fixed-header" id="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/Active_aura_logo.jpeg" alt="Active Aura Logo">
+                <span>Active Aura</span>
+            </div>
+
+
+
+            <!-- Navigation -->
+            <nav class="main-nav">
+                <a href="home.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="faq.html">FAQ</a>
+            </nav>
+
+            <!-- Action Icons -->
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                
+                <!-- Login/Account Section -->
+                <div class="auth-section">
+                    <a href="login.html" class="icon-btn login-btn" id="loginBtn">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </a>
+                    <div class="account-menu" id="accountMenu" style="display:none;">
+                        <button class="account-btn" id="accountBtn">
+                            <span id="userName">Account</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="account-dropdown" id="accountDropdown">
+                            <a href="#profile">👤 View Profile</a>
+                            <a href="#orders">📦 My Orders</a>
+                            <a href="#wishlist">❤️ Wishlist</a>
+                            <a href="#" id="logoutBtn">🚪 Logout</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="cart.html" class="icon-btn cart-btn" aria-label="Cart">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Product Categories Menu -->
+    <nav class="categories-menu">
+        <div class="categories-container">
+            <a href="category.html?cat=earbuds" class="category-link">🎧 Earbuds</a>
+            <a href="category.html?cat=mobiles" class="category-link">📱 Mobiles</a>
+            <a href="category.html?cat=laptops" class="category-link">💻 Laptops</a>
+            <a href="category.html?cat=tablets" class="category-link">📱 Tablets</a>
+            <a href="category.html?cat=smartwatches" class="category-link">⌚ Smartwatches</a>
+            <a href="category.html?cat=gaming" class="category-link">🎮 Gaming</a>
+            <a href="category.html?cat=speakers" class="category-link">🔊 Speakers</a>
+            <a href="category.html?cat=other" class="category-link">📦 Other</a>
+        </div>
+    </nav>
+
+    <!-- Welcome Banner (shown when logged in) -->
+    <div class="welcome-banner" id="welcomeBanner" style="display:none;">
+        <div class="welcome-content">
+            <h2>Welcome back, <span id="welcomeUserName"></span>! 👋</h2>
+            <p>Discover amazing deals on premium gadgets</p>
+        </div>
+    </div>
+
+    <!-- Offer Ticker -->
+    <div class="offer-ticker">
+        <div class="ticker-content">
+            <span>🔥 FLASH SALE: Up to 70% OFF</span>
+            <span>🎧 Buy 2 Get 1 FREE Earbuds</span>
+            <span>💻 Laptops Starting ₹15,999</span>
+            <span>⌚ Smartwatches from ₹999</span>
+            <span>🎮 Gaming Gear 60% OFF</span>
+            <span>📱 iPhone 15 Pro Max ₹1,34,900</span>
+            <span>🔥 FLASH SALE: Up to 70% OFF</span>
+            <span>🎧 Buy 2 Get 1 FREE Earbuds</span>
+            <span>💻 Laptops Starting ₹15,999</span>
+            <span>⌚ Smartwatches from ₹999</span>
+            <span>🎮 Gaming Gear 60% OFF</span>
+            <span>📱 iPhone 15 Pro Max ₹1,34,900</span>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-slide active" data-bg="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=1600">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">FLASH SALE</h1>
+                <p class="hero-subtitle">Up to 70% OFF on Premium Tech</p>
+                <button class="cta-btn">Shop Now</button>
+            </div>
+        </div>
+        <div class="hero-slide" data-bg="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1600">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">MEGA DEALS</h1>
+                <p class="hero-subtitle">Latest Smartphones & Laptops</p>
+                <button class="cta-btn">Explore</button>
+            </div>
+        </div>
+        <div class="hero-slide" data-bg="https://static.vecteezy.com/system/resources/previews/002/257/879/non_2x/gadget-banner-vector.jpg">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">TECH ALERT</h1>
+                <p class="hero-subtitle">Gaming & Audio Accessories</p>
+                <button class="cta-btn">Discover</button>
+            </div>
+        </div>
+        <div class="hero-slide" data-bg="https://images.unsplash.com/photo-1498049794561-7780e7231661?w=1600">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">SALE ALERT</h1>
+                <p class="hero-subtitle">Trending Devices & Gadgets</p>
+                <button class="cta-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="hero-indicators">
+            <span class="hero-dot active"></span>
+            <span class="hero-dot"></span>
+            <span class="hero-dot"></span>
+            <span class="hero-dot"></span>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="featured-section" id="featured">
+        <div class="section-header">
+            <h2>Featured Products</h2>
+            <p>Handpicked premium gadgets for you</p>
+        </div>
+        <div class="featured-grid">
+            <article class="featured-card">
+                <div class="featured-badge">New</div>
+                <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500" alt="Pixel Pro X">
+                <div class="featured-info">
+                    <h3>Pixel Pro X</h3>
+                    <p>128GB | 5G Ready</p>
+                    <div class="price-row">
+                        <span class="price">₹6,499</span>
+                        <span class="old-price">₹12,999</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="add-cart-btn">Add to Cart</button>
+                        <button class="buy-now-btn" onclick="buyNowFromCard(this)">Buy Now</button>
+                    </div>
+                </div>
+            </article>
+            <article class="featured-card">
+                <div class="featured-badge">Hot</div>
+                <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500" alt="ActiveBook 15">
+                <div class="featured-info">
+                    <h3>ActiveBook 15</h3>
+                    <p>8GB RAM | 512GB SSD</p>
+                    <div class="price-row">
+                        <span class="price">₹22,999</span>
+                        <span class="old-price">₹45,999</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="add-cart-btn">Add to Cart</button>
+                        <button class="buy-now-btn" onclick="buyNowFromCard(this)">Buy Now</button>
+                    </div>
+                </div>
+            </article>
+            <article class="featured-card">
+                <div class="featured-badge">Sale</div>
+                <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500" alt="AuraPods Pro">
+                <div class="featured-info">
+                    <h3>AuraPods Pro</h3>
+                    <p>Active Noise Cancellation</p>
+                    <div class="price-row">
+                        <span class="price">₹1,999</span>
+                        <span class="old-price">₹3,999</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="add-cart-btn">Add to Cart</button>
+                        <button class="buy-now-btn" onclick="buyNowFromCard(this)">Buy Now</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Trending Section -->
+    <section class="trending-section" id="trending">
+        <div class="section-header">
+            <h2>Trending Now</h2>
+            <p>Most popular gadgets this week</p>
+        </div>
+        <div class="trending-grid">
+            <article class="product-card">
+                <div class="discount-tag">45% OFF</div>
+                <img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=500" alt="Smart Watch">
+                <h3>Smart Watch</h3>
+                <p class="product-desc">AMOLED Display</p>
+                <div class="price-row">
+                    <span class="price">₹2,999</span>
+                    <span class="old-price">₹5,999</span>
+                </div>
+                <div class="product-actions">
+                    <button class="add-cart-btn">Add to Cart</button>
+                    <button class="buy-now-btn" onclick="buyNowFromCard(this)">Buy Now</button>
+                </div>
+            </article>
+            <article class="product-card">
+                <div class="discount-tag">60% OFF</div>
+                <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=500" alt="Wireless Headphone">
+                <h3>Wireless Headphone</h3>
+                <p class="product-desc">Noise Cancelling</p>
+                <div class="price-row">
+                    <span class="price">₹3,999</span>
+                    <span class="old-price">₹7,999</span>
+                </div>
+                <div class="product-actions">
+                    <button class="add-cart-btn">Add to Cart</button>
+                    <button class="buy-now-btn" onclick="buyNowFromCard(this)">Buy Now</button>
+                </div>
+            </article>
+            <article class="product-card">
+                <div class="discount-tag">35% OFF</div>
+                <img src="https://images.unsplash.com/photo-1545454675-3531b543be5d?w=500" alt="Bluetooth Speaker">
+                <h3>Bluetooth Speaker</h3>
+                <p class="product-desc">Deep Bass</p>
+                <div class="price-row">
+                    <span class="price">₹2,499</span>
+                    <span class="old-price">₹4,999</span>
+                </div>
+                <div class="product-actions">
+                    <button class="add-cart-btn">Add to Cart</button>
+                    <button class="buy-now-btn" onclick="buyNowFromCard(this)">Buy Now</button>
+                </div>
+            </article>
+            <article class="product-card">
+                <div class="discount-tag">55% OFF</div>
+                <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=500" alt="Camera">
+                <h3>Digital Camera</h3>
+                <p class="product-desc">24MP HD</p>
+                <div class="price-row">
+                    <span class="price">₹11,249</span>
+                    <span class="old-price">₹22,499</span>
+                </div>
+                <div class="product-actions">
+                    <button class="add-cart-btn">Add to Cart</button>
+                    <button class="buy-now-btn" onclick="buyNowFromCard(this)">Buy Now</button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+
+    <!-- All Products Section -->
+    <section class="products-section" id="products">
+        <div class="section-header">
+            <h2>All Products</h2>
+            <p>Explore our complete collection</p>
+        </div>
+        <div class="products-grid">
+            <article class="product-card">
+                <div class="discount-tag">30% OFF</div>
+                <img src="https://i5.walmartimages.com/seo/PA1-128GB-Silver_e2d97536-a924-4841-b314-613580044392.a067c7af5e9fb195e38b0850a72c42d1.jpeg">
+                <h3>Smartphone</h3>
+                <p class="product-desc">128GB Storage</p>
+                <div class="price-row">
+                    <span class="price">₹6,499</span>
+                    <span class="old-price">₹12,999</span>
+                </div>
+                <div class="product-actions">
+                    <button class="add-cart-btn">Add to Cart</button>
+                    <button class="buy-now-btn" onclick="buyNowFromCard(this)">Buy Now</button>
+                </div>
+            </article>
+            <article class="product-card">
+                <div class="discount-tag">65% OFF</div>
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500" alt="Laptop">
+                <h3>Laptop</h3>
+                <p class="product-desc">8GB RAM</p>
+                <div class="price-row">
+                    <span class="price">₹22,999</span>
+                    <span class="old-price">₹45,999</span>
+                </div>
+                <div class="product-actions">
+                    <button class="add-cart-btn">Add to Cart</button>
+                    <button class="buy-now-btn" onclick="buyNowFromCard(this)">Buy Now</button>
+                </div>
+            </article>
+            <article class="product-card">
+                <div class="discount-tag">40% OFF</div>
+                <img src="https://images.unsplash.com/photo-1561154464-82e9adf32764?w=500" alt="Tablet">
+                <h3>Tablet</h3>
+                <p class="product-desc">11-inch Display</p>
+                <div class="price-row">
+                    <span class="price">₹18,999</span>
+                    <span class="old-price">₹31,999</span>
+                </div>
+                <div class="product-actions">
+                    <button class="add-cart-btn">Add to Cart</button>
+                    <button class="buy-now-btn" onclick="buyNowFromCard(this)">Buy Now</button>
+                </div>
+            </article>
+            <article class="product-card">
+                <div class="discount-tag">70% OFF</div>
+                <img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=500" alt="Gaming Controller">
+                <h3>Gaming Controller</h3>
+                <p class="product-desc">Wireless Pro</p>
+                <div class="price-row">
+                    <span class="price">₹2,999</span>
+                    <span class="old-price">₹9,999</span>
+                </div>
+                <div class="product-actions">
+                    <button class="add-cart-btn">Add to Cart</button>
+                    <button class="buy-now-btn" onclick="buyNowFromCard(this)">Buy Now</button>
+                </div>
+            </article>
+            <article class="product-card">
+                <div class="discount-tag">42% OFF</div>
+                <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=500" alt="Bluetooth Speaker">
+                <h3>Bluetooth Speaker</h3>
+                <p class="product-desc">Deep Bass</p>
+                <div class="price-row">
+                    <span class="price">₹2,499</span>
+                    <span class="old-price">₹4,999</span>
+                </div>
+                <div class="product-actions">
+                    <button class="add-cart-btn">Add to Cart</button>
+                    <button class="buy-now-btn" onclick="buyNowFromCard(this)">Buy Now</button>
+                </div>
+            </article>
+            <article class="product-card">
+                <div class="discount-tag">38% OFF</div>
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500" alt="Smart Watch">
+                <h3>Smart Watch</h3>
+                <p class="product-desc">AMOLED Display</p>
+                <div class="price-row">
+                    <span class="price">₹2,999</span>
+                    <span class="old-price">₹5,999</span>
+                </div>
+                <div class="product-actions">
+                    <button class="add-cart-btn">Add to Cart</button>
+                    <button class="buy-now-btn" onclick="buyNowFromCard(this)">Buy Now</button>
+                </div>
+            </article>
+            <article class="product-card">
+                <div class="discount-tag">52% OFF</div>
+                <img src="https://images.unsplash.com/photo-1599669454699-248893623440?w=500" alt="Gaming Headset">
+                <h3>Gaming Headset</h3>
+                <p class="product-desc">7.1 Surround</p>
+                <div class="price-row">
+                    <span class="price">₹4,799</span>
+                    <span class="old-price">₹9,999</span>
+                </div>
+                <div class="product-actions">
+                    <button class="add-cart-btn">Add to Cart</button>
+                    <button class="buy-now-btn" onclick="buyNowFromCard(this)">Buy Now</button>
+                </div>
+            </article>
+            <article class="product-card">
+                <div class="discount-tag">48% OFF</div>
+                <img src="https://images.unsplash.com/photo-1606841837239-c5a1a4a07af7?w=500" alt="Earbuds">
+                <h3>Earbuds</h3>
+                <p class="product-desc">Truly Wireless</p>
+                <div class="price-row">
+                    <span class="price">₹1,999</span>
+                    <span class="old-price">₹3,999</span>
+                </div>
+                <div class="product-actions">
+                    <button class="add-cart-btn">Add to Cart</button>
+                    <button class="buy-now-btn" onclick="buyNowFromCard(this)">Buy Now</button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Phone:</strong> +91 98765 43210</p>
+                <p><strong>Email:</strong> support@activeaura.com</p>
+                <p><strong>Address:</strong> 123 Tech Street, Gadget City, IN 400001</p>
+                <p><strong>Hours:</strong> Mon-Sat 10AM-8PM</p>
+            </div>
+           
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li>✅ Free shipping on orders above ₹999</li>
+                    <li>✅ 7-day easy returns</li>
+                    <li>✅ 1-year warranty on all products</li>
+                    <li>✅ EMI available on purchases above ₹5,000</li>
+                    <li>✅ Cash on delivery available</li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                </ul>
+            </div>
+           
+            <div class="footer-section">
+                <h3>Payment Methods</h3>
+                <div class="payment-icons">
+                    <span>💳</span><span>💰</span><span>📱</span><span>💸</span>
+                </div>
+                <p>Safe & Secure Payments</p>
+            </div>
+        </div>
+       
+        <div class="footer-bottom">
+            <p>&copy; 2025 Active Aura - Gadget Store. All rights reserved. | GST: 27AAKCA1234Q1Z5</p>
+        </div>
+    </footer>
+
+
+    <script src="cart-utils.js"></script>
+    <script src="home.js"></script>
+</body>
+</html>

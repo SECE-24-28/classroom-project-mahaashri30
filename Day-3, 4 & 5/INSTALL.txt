@@ -1,0 +1,133 @@
+╔══════════════════════════════════════════════════════════════╗
+║                                                              ║
+║          ACTIVE AURA - E-COMMERCE INSTALLATION GUIDE         ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝
+
+📦 STEP 1: INSTALL NODE.JS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+If you don't have Node.js installed:
+1. Go to: https://nodejs.org
+2. Download LTS version
+3. Install and restart your computer
+
+To check if installed, open terminal and run:
+   node --version
+
+
+📦 STEP 2: INSTALL DEPENDENCIES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Open terminal in this folder and run:
+
+   npm install
+
+This will install:
+   ✓ express (web framework)
+   ✓ bcrypt (password security)
+   ✓ cors (API access)
+
+
+🚀 STEP 3: START THE SERVER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Run this command:
+
+   npm start
+
+You should see:
+   "Server running on http://localhost:3000"
+
+
+🌐 STEP 4: OPEN THE WEBSITE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Open your browser and go to:
+
+   http://localhost:3000/home.html
+
+
+🎉 THAT'S IT! YOU'RE READY!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔐 ADMIN LOGIN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Email:    admin@activeaura.com
+Password: admin123
+
+Go to: http://localhost:3000/admin.html
+
+
+📱 AVAILABLE PAGES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ home.html           - Homepage
+✓ about.html          - About Us
+✓ contact.html        - Contact
+✓ faq.html            - FAQ
+✓ login.html          - Login
+✓ signup.html         - Sign Up
+✓ cart.html           - Shopping Cart
+✓ checkout.html       - Checkout
+✓ product-details.html - Product Details
+✓ admin.html          - Admin Dashboard
+
+
+🐛 TROUBLESHOOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Problem: "npm: command not found"
+Solution: Install Node.js from nodejs.org
+
+Problem: "Port 3000 already in use"
+Solution: Close other apps using port 3000 or change port in server.js
+
+Problem: "Cannot find module"
+Solution: Run "npm install" again
+
+Problem: Products not loading
+Solution: Make sure server is running (npm start)
+
+Problem: Login not working
+Solution: Check if db/users.json exists
+
+
+📚 MORE HELP
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Read these files for detailed information:
+   ✓ QUICKSTART.md    - Quick setup guide
+   ✓ README_FULL.md   - Complete documentation
+   ✓ PROJECT_SUMMARY.md - Feature list
+
+
+💡 QUICK TIPS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• Keep terminal open while using the website
+• Press Ctrl+C to stop the server
+• Use "npm run dev" for auto-reload during development
+• Check browser console (F12) for errors
+• All data is stored in db/ folder
+
+
+🎨 CUSTOMIZATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• Change colors: Edit home.css (CSS variables)
+• Add products: Use admin panel or edit db/products.json
+• Change logo: Replace images/Active_aura_logo.jpeg
+• Modify content: Edit HTML files
+
+
+🚀 DEPLOYMENT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Frontend: Deploy to Netlify, Vercel, or GitHub Pages
+Backend: Deploy to Heroku, Railway, or Render
+Database: Migrate to MongoDB or PostgreSQL
+
+
+📞 SUPPORT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Email: support@activeaura.com
+Phone: +91 98765 43210
+
+
+═══════════════════════════════════════════════════════════════
+
+           🎉 ENJOY YOUR E-COMMERCE STORE! 🎉
+
+═══════════════════════════════════════════════════════════════

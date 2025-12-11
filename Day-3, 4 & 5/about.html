@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Active Aura</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="navbar-styles.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <!-- Fixed Navbar -->
+    <header class="site-header fixed-header" id="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/Active_aura_logo.jpeg" alt="Active Aura Logo">
+                <span>Active Aura</span>
+            </div>
+            <nav class="main-nav">
+                <a href="home.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="faq.html">FAQ</a>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <a href="login.html" class="icon-btn login-btn" id="loginBtn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </a>
+                <a href="cart.html" class="icon-btn cart-btn" aria-label="Cart">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Categories Menu -->
+    <nav class="categories-menu">
+        <div class="categories-container">
+            <a href="category.html?cat=earbuds" class="category-link">🎧 Earbuds</a>
+            <a href="category.html?cat=mobiles" class="category-link">📱 Mobiles</a>
+            <a href="category.html?cat=laptops" class="category-link">💻 Laptops</a>
+            <a href="category.html?cat=tablets" class="category-link">📱 Tablets</a>
+            <a href="category.html?cat=smartwatches" class="category-link">⌚ Smartwatches</a>
+            <a href="category.html?cat=gaming" class="category-link">🎮 Gaming</a>
+            <a href="category.html?cat=speakers" class="category-link">🔊 Speakers</a>
+            <a href="category.html?cat=other" class="category-link">📦 Other</a>
+        </div>
+    </nav>
+
+    <section class="about-hero">
+        <div class="about-hero-content">
+            <h1>About Active Aura</h1>
+            <p>Your trusted destination for premium gadgets and technology</p>
+        </div>
+    </section>
+
+    <section class="about-story">
+        <div class="container">
+            <h2>Our Story</h2>
+            <p>Founded in 2020, Active Aura has become India's leading online gadget store, offering cutting-edge technology at unbeatable prices. We believe everyone deserves access to premium gadgets that enhance their digital lifestyle.</p>
+        </div>
+    </section>
+
+    <section class="about-values">
+        <div class="container">
+            <h2>Why Choose Us</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">✓</div>
+                    <h3>Authentic Products</h3>
+                    <p>100% genuine products with manufacturer warranty</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">⚡</div>
+                    <h3>Fast Delivery</h3>
+                    <p>Express shipping across India within 2-5 days</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">💰</div>
+                    <h3>Best Prices</h3>
+                    <p>Competitive pricing with regular discounts and offers</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🛡️</div>
+                    <h3>Secure Payments</h3>
+                    <p>Multiple payment options with 100% secure checkout</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Phone:</strong> +91 98765 43210</p>
+                <p><strong>Email:</strong> support@activeaura.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Active Aura. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="cart-utils.js"></script>
+    <script src="home.js"></script>
+</body>
+</html>

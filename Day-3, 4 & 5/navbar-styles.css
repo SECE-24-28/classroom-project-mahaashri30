@@ -1,0 +1,216 @@
+/* Categories Menu */
+.categories-menu {
+    position: fixed;
+    top: var(--navbar-height);
+    left: 0;
+    right: 0;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+    z-index: 999;
+    height: var(--categories-height);
+}
+
+.categories-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 24px;
+    height: 100%;
+}
+
+.category-link {
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.category-link:hover {
+    background: var(--accent);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Account Menu */
+.auth-section {
+    position: relative;
+}
+
+.account-menu {
+    position: relative;
+}
+
+.account-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 8px 16px;
+    color: var(--text-primary);
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.account-btn:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+.account-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px var(--shadow);
+    min-width: 200px;
+    display: none;
+    overflow: hidden;
+}
+
+.account-dropdown.active {
+    display: block;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.account-dropdown a {
+    display: block;
+    padding: 12px 16px;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.account-dropdown a:hover {
+    background: var(--bg-secondary);
+}
+
+/* Welcome Banner */
+.welcome-banner {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 24px;
+    text-align: center;
+    color: white;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.welcome-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.welcome-content p {
+    font-size: 1.1rem;
+    opacity: 0.95;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .categories-container {
+        overflow-x: auto;
+        justify-content: flex-start;
+        scrollbar-width: none;
+    }
+    
+    .categories-container::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: calc(var(--navbar-height) + 40px);
+    }
+    
+    .categories-menu {
+        height: 40px;
+    }
+    
+    .category-link {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+    }
+    
+    .welcome-banner {
+        padding: 16px;
+    }
+    
+    .welcome-content h2 {
+        font-size: 1.3rem;
+    }
+    
+    .welcome-content p {
+        font-size: 0.95rem;
+    }
+    
+    .account-btn {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .categories-container {
+        padding: 0 12px;
+        gap: 6px;
+    }
+    
+    .category-link {
+        font-size: 0.75rem;
+        padding: 5px 10px;
+    }
+    
+    .welcome-banner {
+        padding: 12px;
+    }
+    
+    .welcome-content h2 {
+        font-size: 1.1rem;
+    }
+    
+    .welcome-content p {
+        font-size: 0.85rem;
+    }
+    
+    .account-btn {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+    
+    .account-dropdown {
+        min-width: 160px;
+    }
+    
+    .account-dropdown a {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+    }
+}

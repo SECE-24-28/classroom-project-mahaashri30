@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category - Active Aura</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="navbar-styles.css">
+    <link rel="stylesheet" href="category.css">
+</head>
+<body>
+    <header class="site-header fixed-header" id="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="home.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+                    <img src="images/Active_aura_logo.jpeg" alt="Active Aura Logo">
+                    <span>Active Aura</span>
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <a href="home.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="faq.html">FAQ</a>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="12" cy="12" r="5"></circle>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <div class="auth-section">
+                    <a href="login.html" class="icon-btn login-btn" id="loginBtn">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </a>
+                    <div class="account-menu" id="accountMenu" style="display:none;">
+                        <button class="account-btn" id="accountBtn">
+                            <span id="userName">Account</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="account-dropdown" id="accountDropdown">
+                            <a href="#profile">👤 View Profile</a>
+                            <a href="#orders">📦 My Orders</a>
+                            <a href="#wishlist">❤️ Wishlist</a>
+                            <a href="#" id="logoutBtn">🚪 Logout</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="cart.html" class="icon-btn cart-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="categories-menu">
+        <div class="categories-container">
+            <a href="category.html?cat=earbuds" class="category-link">🎧 Earbuds</a>
+            <a href="category.html?cat=mobiles" class="category-link">📱 Mobiles</a>
+            <a href="category.html?cat=laptops" class="category-link">💻 Laptops</a>
+            <a href="category.html?cat=tablets" class="category-link">📱 Tablets</a>
+            <a href="category.html?cat=smartwatches" class="category-link">⌚ Smartwatches</a>
+            <a href="category.html?cat=gaming" class="category-link">🎮 Gaming</a>
+            <a href="category.html?cat=speakers" class="category-link">🔊 Speakers</a>
+            <a href="category.html?cat=other" class="category-link">📦 Other</a>
+        </div>
+    </nav>
+
+    <section class="category-section">
+        <div class="category-header">
+            <h1 id="categoryTitle">Products</h1>
+            <p id="categoryDesc">Browse our collection</p>
+        </div>
+        <div class="products-grid" id="categoryProducts">
+            <!-- Products will be loaded here -->
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Email:</strong> support@activeaura.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Active Aura. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="products-data.js"></script>
+    <script src="cart-utils.js"></script>
+    <script src="home.js"></script>
+    <script src="category.js"></script>
+</body>
+</html>
